@@ -1,0 +1,69 @@
+{
+  "installed_utc": "2026-10-31T11:18:17.754437+00:00",
+  "vm_uuid": "3558e997-ebeb-1667-beab-52cda40ec3cf",
+  "host": "192.168.1.50",
+  "guard_before_sha256": "e848e00c754c3b9289aa004bc5f0b207aa6bbd1d9fc3b336217eb59933a24c23",
+  "guard_after_sha256": "afd801290a7806d31aa5dbd97ba90534058f5f480ad317fa02ed241e2bf61911",
+  "active_path": "/usr/local/libexec/voip50-check-interface",
+  "updated_source_copies": [
+    "/root/voip50-build/network-preparation/voip50_check_interface.py",
+    "/home/mark/voip50-build-input/voip50_check_interface.py"
+  ],
+  "backup_directory": "/root/voip50-build/reboot-guard-fix-20261031T111817Z",
+  "read_only_native_checks": [
+    {
+      "interface": "enX0",
+      "role": "internal",
+      "exit_code": 0,
+      "expected_success": true
+    },
+    {
+      "interface": "enX1",
+      "role": "public",
+      "exit_code": 0,
+      "expected_success": true
+    },
+    {
+      "interface": "enX0",
+      "role": "public",
+      "exit_code": 1,
+      "expected_success": false
+    },
+    {
+      "interface": "enX0",
+      "role": "internal",
+      "exit_code": 0,
+      "expected_success": true
+    },
+    {
+      "interface": "enX1",
+      "role": "public",
+      "exit_code": 0,
+      "expected_success": true
+    },
+    {
+      "interface": "enX1",
+      "role": "internal",
+      "exit_code": 1,
+      "expected_success": false
+    }
+  ],
+  "freeswitch_pid_before": "9574",
+  "freeswitch_pid_after": "9574",
+  "freeswitch_active": true,
+  "service_restart_performed": false,
+  "network_restart_performed": false,
+  "network_addresses_and_routes_unchanged": true,
+  "firewall_unchanged": true,
+  "control_and_freeswitch_configuration_hashes_unchanged": true,
+  "calls_before": "0 total.",
+  "calls_after": "0 total.",
+  "actual_reboot_performed": false,
+  "first_activation_still_requires_fresh_proof": true,
+  "subsequent_boot_uses_exact_persistent_commission": true,
+  "installed_modes": {
+    "/usr/local/libexec/voip50-check-interface": "0o700",
+    "/root/voip50-build/network-preparation/voip50_check_interface.py": "0o600",
+    "/home/mark/voip50-build-input/voip50_check_interface.py": "0o600"
+  }
+}

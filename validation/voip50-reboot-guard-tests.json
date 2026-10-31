@@ -1,0 +1,9 @@
+{
+  "test_methods_passed": 10,
+  "old_guard_expired_proof_regression_reproduced": true,
+  "future_first_activation_proof_rejected": true,
+  "wrong_guest_uuid_mac_role_or_commission_rejected": true,
+  "installed_source_matches_repository_sha256": "afd801290a7806d31aa5dbd97ba90534058f5f480ad317fa02ed241e2bf61911",
+  "local_document_links_checked": true,
+  "actual_reboot_performed": false
+}

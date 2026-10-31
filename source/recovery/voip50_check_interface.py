@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""PROPOSED recovery fix; NOT installed on the live 50er by this backup task.
+"""VoIP50 network guard: fresh first activation, persistent authorized reboots.
 
 First activation still requires a fresh shutdown/authorization proof. Subsequent
 boots may use the exact persistent commissioning established by LIVE startup.

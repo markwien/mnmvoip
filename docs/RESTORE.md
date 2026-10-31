@@ -128,7 +128,8 @@ Dauerbootmedium belassen.
 
 ## 5. Bekannte 50er-Neustartfalle vor dem ersten Restore-Boot behandeln
 
-**Im gesicherten LIVE-Stand vorhanden, am Original nicht verändert:**
+**Im ursprünglichen Sicherungsarchiv vorhanden; am LIVE-50er am 31.10.2026
+um 12:18 Uhr Europe/Vienna ohne Neustart behoben:**
 `/usr/local/libexec/voip50-check-interface` wird durch `pre-up` beider Interfaces
 ausgeführt. Der alte Helfer verlangt auch nach erfolgreicher Inbetriebnahme
 noch einen weniger als 15 Minuten alten Umschaltnachweis. Dieser ist später
@@ -136,8 +137,10 @@ zwangsläufig abgelaufen; deshalb kann ein regulärer Reboot das Netz blockieren
 Die FreeSWITCH-Laufzeit selbst besitzt bereits eine dauerhafte Commissioning-
 Prüfung, der Netzwerk-Helfer noch nicht.
 
-Eine getestete, noch nicht produktiv installierte Korrektur liegt in
-`source/recovery/voip50_check_interface.py`. Sie akzeptiert nach Inbetriebnahme
+Die getestete und inzwischen produktiv installierte Korrektur liegt in
+`source/recovery/voip50_check_interface.py`. Die verschlüsselten Basisarchive
+bleiben unverändert; dieser Quelltext ist der notwendige Restore-Overlay.
+Er akzeptiert nach Inbetriebnahme
 nur den rootgeschützten, vollständig zum aktuellen Plan passenden dauerhaften
 Nachweis. MAC, Rolle und tatsächliche Gast-UUID bleiben geprüft. Ohne diesen
 Nachweis ist für die erste Aktivierung weiterhin frische Abschalt-/Freigabeevidenz nötig.
@@ -150,11 +153,18 @@ cp /mnt/recovered/usr/local/libexec/voip50-check-interface \
    /mnt/recovered/root/voip50-check-interface.before-recovery
 install -o root -g root -m 700 source/recovery/voip50_check_interface.py \
    /mnt/recovered/usr/local/libexec/voip50-check-interface
+install -o root -g root -m 600 source/recovery/voip50_check_interface.py \
+   /mnt/recovered/root/voip50-build/network-preparation/voip50_check_interface.py
+install -o root -g root -m 600 source/recovery/voip50_check_interface.py \
+   /mnt/recovered/home/mark/voip50-build-input/voip50_check_interface.py
 ```
 
 Bei derselben VM und unverändertem Plan wird der vorhandene dauerhafte Nachweis
 verwendet. Bei einer neuen VM erst Abschnitt 6 durchführen. Nicht einfach den
 Timestamp eines alten Umschaltnachweises erneuern oder den Guard auskommentieren.
+Die zwei Quellkopien werden mit aktualisiert, damit eine spätere Installation
+nicht versehentlich den alten Guard zurückbringt. Details und Prüfsummen stehen
+in [VOIP50-REBOOT-GUARD-FIX.md](VOIP50-REBOOT-GUARD-FIX.md).
 
 ## 6. Vollständig neue VM: Identität bewusst neu binden
 

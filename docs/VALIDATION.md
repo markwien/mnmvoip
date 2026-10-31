@@ -46,7 +46,7 @@ Das sind historische Funktionsnachweise der laufenden Ersatz-Switches. Sie sind
 kein Nachweis einer bereits erfolgreich gebooteten Wiederherstellung aus den
 hier veröffentlichten Archiven.
 
-## Beim Backup entdeckter offener Fehler
+## Beim Backup entdeckter und anschließend behobener Fehler
 
 Der installierte `voip50-check-interface` fordert in `pre-up` weiterhin einen
 15 Minuten frischen Umschaltnachweis. Dies kann die Netzanbindung nach einem
@@ -54,13 +54,23 @@ späteren Reboot blockieren. Die passende permanente Commissioning-Datei existie
 bereits für die FS-Laufzeit, wird aber vom ursprünglichen Netzwerk-Guard noch
 nicht verwendet.
 
-Die vorgeschlagene Korrektur unter `source/recovery/` wurde mit acht Testmethoden
-einschließlich abgelaufenem Erstnachweis, späterem regulärem Boot, falscher UUID,
-MAC/Rolle, geändertem Plan und fehlender Freigabe geprüft. Auch die sichere
-Archiv-Reassemblierung mit beschädigten Teilen und Pfadtraversal wurde getestet.
-Die Korrektur wurde auf dem LIVE-50er **nicht installiert** und kein Reboot ausgelöst.
-Vor einem geplanten Neustart diesen Punkt bewusst beheben oder eine geprüfte
-Wartungs-/Konsolenprozedur anwenden.
+Die Korrektur unter `source/recovery/` wurde nach ausdrücklicher Betreiberfreigabe
+am 31.10.2026 um 12:18 Uhr Europe/Vienna auf dem LIVE-50er atomar installiert.
+Die Regression ist gegen den archivierten Original-Guard reproduziert. Die
+aktuelle Testsuite besteht zehn Testmethoden einschließlich abgelaufenem oder in
+der Zukunft liegendem Erstnachweis, späterem regulärem Boot, falscher UUID, MAC/Rolle, geändertem Plan,
+fehlender Freigabe sowie beschädigten Archivteilen und Pfadtraversal.
+
+Beide tatsächlichen `pre-up`-Prüfungen des installierten Guards bestehen jetzt;
+vertauschte Interface-Rollen werden weiterhin abgewiesen. FreeSWITCH-PID 9574
+blieb unverändert, ebenso Netzwerkadressen, Routen, Firewall und relevante
+Steuer-/FreeSWITCH-Konfigurationsdateien. Es gab keinen Dienst-/Netzwerkneustart.
+Beide gespeicherten Installationsquellen auf dem Gast wurden ebenfalls korrigiert.
+Ein tatsächlicher Reboot wurde gemäß Auftrag nicht ausgelöst.
+
+[Installationsnachweis](../validation/voip50-reboot-guard-fix.json) und
+[technische Änderung](VOIP50-REBOOT-GUARD-FIX.md). Die verschlüsselten Basisarchive
+enthalten den Stand vor diesem Hotfix; beim Restore den dokumentierten Overlay anwenden.
 
 ## Noch durchzuführen, bevor ein Restore als abgenommen gilt
 
@@ -71,5 +81,5 @@ Wartungs-/Konsolenprozedur anwenden.
 5. Nach kontrollierter Übernahme echter Testanruf, Medien, Ansage, Auflegen,
    lokale und zentrale Abrechnung; anschließend neuer Sicherungssatz.
 
-Die eigentlichen Telefoniedienste, Panels und Datenbanken wurden im Rahmen
-dieser Sicherungs-/Dokumentationsaufgabe nicht neu konfiguriert oder neu gestartet.
+Die Telefoniedienste, Panels und Datenbanken wurden weder durch die Sicherung
+noch durch diesen Guard-Hotfix neu konfiguriert oder neu gestartet.

@@ -40,6 +40,24 @@ class GuardTests(unittest.TestCase):
 
     def test_reboot_uses_matching_commission_after_old_proof_expires(self):
         self.assertTrue(self.check(commission=self.commission, mode='LIVE', now=900000))
+        self.assertTrue(self.check(commission=self.commission, mode='LIVE', now=900000, proof={}))
+
+    def test_original_installed_guard_reproduces_expired_proof_regression(self):
+        original_path = ROOT / 'source/installed/voip50/usr/local/libexec/voip50-check-interface'
+        original_spec = importlib.util.spec_from_loader('original_guard',
+            importlib.machinery.SourceFileLoader('original_guard', str(original_path)))
+        original = importlib.util.module_from_spec(original_spec)
+        original_spec.loader.exec_module(original)
+        with self.assertRaises(PermissionError):
+            original.validate(self.plan, 'enX0', 'internal', '02:00:00:00:00:01', self.proof, 900000)
+        self.assertTrue(self.check(commission=self.commission, mode='LIVE', now=900000))
+
+    def test_future_proof_or_wrong_old_vm_rejected(self):
+        with self.assertRaises(PermissionError):
+            self.check(now=999)
+        proof = dict(self.proof, old_vm_uuid='not-the-replaced-vm')
+        with self.assertRaises(ValueError):
+            self.check(proof=proof)
 
     def test_missing_or_false_shutdown_evidence_rejected(self):
         for field in ['user_authorized_live', 'old_vm_halted', 'old_vifs_inactive']:

@@ -36,6 +36,12 @@ Die Archive wurden entschlüsselt, vollständig gelesen und auf Prüfsummen gepr
 alle fünf SQLite-Sicherungen bestanden `integrity_check`. Ein Boot-/Telefonietest
 einer aus diesen Archiven neu wiederhergestellten VM wurde noch nicht durchgeführt.
 
+**Aktualisierung 31.10.2026, 12:18 Uhr:** Die Neustartfalle im Netzwerk-Guard des
+50ers ist ohne Neustart behoben. Der Hotfix und beide Schnittstellen wurden am
+LIVE-Gast lesend geprüft. Die unveränderten verschlüsselten Archive enthalten
+den früheren Stand; beim Restore deshalb den [Guard-Overlay aus Abschnitt 5](docs/RESTORE.md#5-bekannte-50er-neustartfalle-vor-dem-ersten-restore-boot-behandeln)
+einspielen. [Änderung und Nachweise](docs/VOIP50-REBOOT-GUARD-FIX.md).
+
 ## Sicherung laden und prüfen
 
 Ein vollständiger Clone umfasst ungefähr 1,6 GB verschlüsselte Sicherungsdaten.
