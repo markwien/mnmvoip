@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.passphrase
+*passphrase.txt
+*.key
+*.pem
+restore-work/
+private/
+*.partial

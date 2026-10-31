@@ -1,0 +1,11 @@
+[Unit]
+Description=Read-only VoIP38 custom announcement source
+Wants=network-online.target
+After=network-online.target
+
+[Mount]
+What=192.168.1.214:/volume1/freeswitchSounds/en/us/callie/mark
+Where=/mnt/voip38-prompts
+Type=nfs4
+Options=ro,nosuid,nodev,noexec,vers=4.0,soft,timeo=20,retrans=2,actimeo=1
+TimeoutSec=15

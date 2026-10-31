@@ -1,0 +1,14 @@
+# INACTIVE. Separate authorization and verified old50 shutdown required.
+auto lo
+iface lo inet loopback
+
+auto enX0
+iface enX0 inet static
+    address 192.168.1.50/24
+    pre-up /usr/local/libexec/voip50-check-interface enX0 internal
+
+auto enX1
+iface enX1 inet static
+    address 92.61.60.50/26
+    gateway 92.61.60.1
+    pre-up /usr/local/libexec/voip50-check-interface enX1 public

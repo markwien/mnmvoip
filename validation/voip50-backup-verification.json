@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "vm_uuid": "3558e997-ebeb-1667-beab-52cda40ec3cf",
+  "hostname": "voip50-next",
+  "gpg_integrity_verified": true,
+  "all_tar_file_contents_read": true,
+  "stable_code_and_config_hashes_matched": 191,
+  "consistent_sqlite_snapshots_integrity_ok": 2,
+  "members": 52209,
+  "regular_files": 42383,
+  "uncompressed_bytes": 1506655780,
+  "external_ccsystem_database_included": false,
+  "boot_restore_test_performed": false,
+  "live_file_copy_not_atomic_disk_image": true
+}

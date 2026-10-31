@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+import subprocess
+r = subprocess.run(['/usr/local/bin/fs_cli', '-x', 'cdr_csv rotate'],
+                   capture_output=True, text=True, timeout=15)
+if r.returncode or r.stdout.strip() != '+OK':
+    raise SystemExit('CDR file reopen failed; inspect FreeSWITCH module state')

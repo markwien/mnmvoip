@@ -1,0 +1,11 @@
+[Unit]
+Description=Rotate local VoIP38 CDR files without restarting FreeSWITCH
+After=freeswitch.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/logrotate --state /var/lib/logrotate/voip38-cdr.status /etc/logrotate-voip38-cdr.conf
+UMask=0077
+Nice=10
+IOSchedulingClass=idle
+NoNewPrivileges=true

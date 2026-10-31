@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import json,sys
+from pathlib import Path
+plan=json.loads(Path('/etc/voip38/network-plan.json').read_text())
+iface,role=sys.argv[1:]
+expected=plan[role]
+if iface!=expected['interface'] or Path('/sys/class/net/'+iface+'/address').read_text().strip().lower()!=expected['mac'].lower():
+ raise SystemExit('Interface name/MAC does not match prepared VoIP38 network role')

@@ -1,0 +1,8 @@
+[Unit]
+Description=Refresh staged VoIP38 firewall input every minute
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=60
+Unit=voip38-firewall-fetch.service
+[Install]
+WantedBy=timers.target

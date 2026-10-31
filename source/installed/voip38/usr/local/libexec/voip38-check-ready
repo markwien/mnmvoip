@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import subprocess,time,re
+end=time.monotonic()+18
+while time.monotonic()<end:
+ try:
+  r=subprocess.run(['/usr/local/bin/fs_cli','-x','sofia status'],capture_output=True,text=True,timeout=2)
+  if r.returncode==0 and re.search(r'^\s*voip01\s+profile\s+.*RUNNING',r.stdout,re.M):
+   required=['mod_lua','mod_spandsp','mod_bcg729','mod_amr','mod_local_stream']
+   if all(subprocess.run(['/usr/local/bin/fs_cli','-x','module_exists '+m],capture_output=True,text=True,timeout=2).stdout.strip()=='true' for m in required):raise SystemExit(0)
+ except subprocess.TimeoutExpired:pass
+ time.sleep(.2)
+raise SystemExit('FreeSWITCH voip01 did not become ready')

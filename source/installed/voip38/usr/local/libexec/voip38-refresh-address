@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+import subprocess,json,xml.etree.ElementTree as E
+from pathlib import Path
+routes=json.loads(subprocess.check_output(['ip','-j','route','get','1.1.1.1'],text=True));ip=routes[0]['prefsrc']
+p=Path('/etc/freeswitch/freeswitch.xml');r=E.parse(p)
+for prof in r.iter('profile'):
+ if prof.get('name')=='voip38-pilot':
+  for e in prof.iter('param'):
+   if e.get('name') in ['sip-ip','rtp-ip']:e.set('value',ip)
+for l in r.iter('list'):
+ if l.get('name')=='pilot-trusted':
+  for e in list(l):l.remove(e)
+  sources=['127.0.0.1/32',ip+'/32']+json.loads(Path('/etc/freeswitch/pilot-sources.json').read_text())
+  for source in sources:E.SubElement(l,'node',type='allow',cidr=source)
+E.indent(r);r.write(p,encoding='unicode')

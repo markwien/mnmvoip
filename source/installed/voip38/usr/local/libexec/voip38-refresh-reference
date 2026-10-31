@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+from pathlib import Path
+import sys,re,json,urllib.request,urllib.parse,hashlib,ipaddress,xml.etree.ElementTree as E,os,datetime
+os.umask(0o077)
+p=Path('/root/voip38-build');src=(p/'production-reference/etc/shorewall/reloadConfig.sh').read_text();u=re.findall(r'https?://[^\s\x22\x27]+',src)[0];v=urllib.parse.urlsplit(u);q=urllib.parse.parse_qs(v.query);assert set(q)=={'switchid'} and q['switchid'][0].isdigit()
+cache=p/'panel-reference-cache';cache.mkdir(mode=0o700,exist_ok=True);results=[]
+for action in (['getHostsConfig'] if '--firewall-only' in sys.argv else ['getHostsConfig','getGateways','getGatewayUsers','getCardsConfig','ivrXML']):
+ url='http://192.168.1.60/configHandler/'+action+('?' +urllib.parse.urlencode({'switchid':q['switchid'][0]}) if action!='ivrXML' else '')
+ try:
+  r=urllib.request.urlopen(urllib.request.Request(url,headers={'Host':'config.telemediacloud.com'}),timeout=12);data=r.read(8*1024*1024);assert len(data)<8*1024*1024 and r.status==200
+  assert b'<html' not in data.lower() and b'<!doctype html' not in data.lower()
+  summary={'action':action,'http_status':r.status,'bytes':len(data)}
+  if action=='getHostsConfig':
+   lines=[l for l in data.decode().splitlines() if l.strip() and not l.lstrip().startswith('#')];assert lines
+   for line in lines:
+    f=line.split('#',1)[0].split();assert len(f)>=2 and ':' in f[1]
+    for cidr in f[1].split(':',1)[1].split(','):ipaddress.ip_network(cidr,strict=False)
+   summary['rules']=len(lines)
+  else:
+   text=re.sub(r'<\?xml[^>]*\?>','',data.decode());root=E.fromstring('<reference>'+text+'</reference>');summary['elements']=sum(1 for e in root.iter())
+   if action=='getCardsConfig':summary.update({'users':len(list(root.iter('user'))),'password_parameters':sum(1 for e in root.iter('param') if e.get('name')=='password'),'users_with_cidr':sum(1 for e in root.iter('user') if e.get('cidr'))})
+  tmp=cache/(action+'.new');tmp.write_bytes(data);tmp.replace(cache/action);summary['valid']=True
+ except Exception as e:summary={'action':action,'valid':False,'error_type':type(e).__name__}
+ results.append(summary)
+out={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'vm':'192.168.1.213','results':results,'activated':False,'database_writes_enabled':False};(p/('firewall-timer-result.json' if '--firewall-only' in sys.argv else 'panel-fetch-results.json')).write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2))
+if not all(r['valid'] for r in results):raise SystemExit(1)

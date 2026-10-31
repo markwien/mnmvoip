@@ -1,0 +1,7 @@
+[Unit]
+Description=On-demand read-only VoIP50 announcement source
+[Automount]
+Where=/mnt/voip50-prompts
+TimeoutIdleSec=120
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotate local VoIP50 BUILD CDRs
+After=freeswitch.service
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/logrotate --state /var/lib/logrotate/voip50-cdr.status /etc/logrotate-voip50-cdr.conf
+UMask=0077
+Nice=10
+IOSchedulingClass=idle
+NoNewPrivileges=true

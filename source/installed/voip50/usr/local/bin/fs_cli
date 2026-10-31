@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$(id -u)" -ne 0 ]; then
+  exec sudo -n /usr/local/bin/fs_cli "$@"
+fi
+export HOME=/root
+exec /opt/freeswitch/bin/fs_cli "$@"

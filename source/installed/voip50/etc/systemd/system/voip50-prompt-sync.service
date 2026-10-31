@@ -1,0 +1,9 @@
+[Unit]
+Description=Validate and mirror VoIP50 custom announcements from read-only NAS
+Wants=network-online.target
+After=network-online.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/voip50-sync-prompts
+TimeoutStartSec=90
+UMask=0077

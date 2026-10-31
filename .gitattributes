@@ -1,0 +1,2 @@
+# Preserve ciphertext bytes and avoid text/delta merges of large encrypted chunks.
+backups/** -text -diff -merge

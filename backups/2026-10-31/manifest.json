@@ -1,0 +1,257 @@
+{
+  "format": 1,
+  "encryption": "OpenPGP symmetric AES256 with separate random passphrase",
+  "snapshot_type": "live root filesystem file export plus individual SQLite online backups",
+  "key_in_repository": false,
+  "external_database_backup_included": false,
+  "artifacts": [
+    {
+      "file": "voip38-metadata.tar.gz.gpg",
+      "bytes": 100295,
+      "sha256": "746fb49685bcb699883ba5148003fbaa27b8ddd293316e8420cea17d1ef4ce2f",
+      "started_utc": "2026-10-31T10:48:18.993848+00:00",
+      "completed_utc": "2026-10-31T10:48:20.800768+00:00",
+      "vm_uuid": "d30bf2b6-49e4-7ca7-c7a9-e5640b2ffdb4",
+      "remote_exit_code": 0,
+      "encryption_exit_code": 0,
+      "parts": [
+        {
+          "file": "voip38-metadata.tar.gz.gpg.part-000",
+          "bytes": 100295,
+          "sha256": "746fb49685bcb699883ba5148003fbaa27b8ddd293316e8420cea17d1ef4ce2f"
+        }
+      ]
+    },
+    {
+      "file": "voip38-rootfs.tar.gz.gpg",
+      "bytes": 786001316,
+      "sha256": "e9ed52183805279baf9815a0da7a1da33f12167d63316c398fbf2dd70577e09b",
+      "started_utc": "2026-10-31T10:48:21.089521+00:00",
+      "completed_utc": "2026-10-31T10:49:40.007118+00:00",
+      "vm_uuid": "d30bf2b6-49e4-7ca7-c7a9-e5640b2ffdb4",
+      "remote_exit_code": 0,
+      "encryption_exit_code": 0,
+      "parts": [
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-000",
+          "bytes": 41943040,
+          "sha256": "3eb09cf916f46d57ff62378dcd0015ad92b579d7ca122b105c3cf494b8d335a6"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-001",
+          "bytes": 41943040,
+          "sha256": "56c7ff227e4f9ba68d36c052200557d5233dd0c390bb0068ffe6eb2ba4a15a22"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-002",
+          "bytes": 41943040,
+          "sha256": "ea5a8ae833de1f40f4e7fbeccc06377820841997a28d359c227b168558aa913d"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-003",
+          "bytes": 41943040,
+          "sha256": "823cfec97f006f19c631cd13be654ba45ca0d9f48fd2ef90e6bfa7e5d3b1f718"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-004",
+          "bytes": 41943040,
+          "sha256": "932c5d8a585fa6d6b28010a32cbbe27089397f08dd5711816c8127137c46e49a"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-005",
+          "bytes": 41943040,
+          "sha256": "1e0405d20c62514a31e4614836fbc386399fc537ec49539726ad2b0f635ac6ee"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-006",
+          "bytes": 41943040,
+          "sha256": "9642598d2581f3b8663018995215c212d7e006d1ac99d2a9e3b73dae98e7b62d"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-007",
+          "bytes": 41943040,
+          "sha256": "e26b5e2ad6ac04314b50a499c437cbb10e680830548139cd85488549b02715bd"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-008",
+          "bytes": 41943040,
+          "sha256": "d21aa30ea880a0d38f7ea3ec49b55707cacde4e43a940b12ed7df5bda6cb156b"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-009",
+          "bytes": 41943040,
+          "sha256": "554df8b0758c9cf295bcb77750cd22fff09e034d4644ea69ea76434a831e6907"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-010",
+          "bytes": 41943040,
+          "sha256": "c815bf8c44027034c8ce87b218b1afbcb032bde7dfaa30fa2f3990cf7e841c19"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-011",
+          "bytes": 41943040,
+          "sha256": "7b33a0e97a855f53fbaa60159135b6e66c18878224936bc60f4bfa36afcd3483"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-012",
+          "bytes": 41943040,
+          "sha256": "2996af90de615b210f9dfd4857ed659925d357ccf38186949ad55bb777ae0259"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-013",
+          "bytes": 41943040,
+          "sha256": "2e6fdcaa4ad5ed2d36e6e18cf55338ffbeac8c6678c9501f06d8458578708826"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-014",
+          "bytes": 41943040,
+          "sha256": "efa89ec5b55637ef2049326c97cd0a8d2fb9de707204a6f27cf2987e75fdd117"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-015",
+          "bytes": 41943040,
+          "sha256": "9a1bc477fed42e7b913ea703174645e7c79aac77b265e88e851007ea4e2a2e40"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-016",
+          "bytes": 41943040,
+          "sha256": "de5f55aeb5a504c2a7eb5afe73f95cc7043efb5f4ad212b7776ee4cbdda1ebca"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-017",
+          "bytes": 41943040,
+          "sha256": "072a50626e6dfe9796ca88d9745d30c532fad02592b1a313ebd44e8bdebbcf21"
+        },
+        {
+          "file": "voip38-rootfs.tar.gz.gpg.part-018",
+          "bytes": 31026596,
+          "sha256": "c4e6e778d396e50c50e49bed9c1ee26e7a4a92ffc7293125282d471e52168da4"
+        }
+      ]
+    },
+    {
+      "file": "voip50-metadata.tar.gz.gpg",
+      "bytes": 96164,
+      "sha256": "e074ae69a5624998b22db938781162d650ecc3b8fd20f1c92749d3d834de94a6",
+      "started_utc": "2026-10-31T10:48:19.266198+00:00",
+      "completed_utc": "2026-10-31T10:48:21.018239+00:00",
+      "vm_uuid": "3558e997-ebeb-1667-beab-52cda40ec3cf",
+      "remote_exit_code": 0,
+      "encryption_exit_code": 0,
+      "parts": [
+        {
+          "file": "voip50-metadata.tar.gz.gpg.part-000",
+          "bytes": 96164,
+          "sha256": "e074ae69a5624998b22db938781162d650ecc3b8fd20f1c92749d3d834de94a6"
+        }
+      ]
+    },
+    {
+      "file": "voip50-rootfs.tar.gz.gpg",
+      "bytes": 794501097,
+      "sha256": "eeb93d221d01d1cc62ff84672f1df11c485e318dc7a91cbd391d4672d36322e8",
+      "started_utc": "2026-10-31T10:48:21.359386+00:00",
+      "completed_utc": "2026-10-31T10:49:49.979670+00:00",
+      "vm_uuid": "3558e997-ebeb-1667-beab-52cda40ec3cf",
+      "remote_exit_code": 0,
+      "encryption_exit_code": 0,
+      "parts": [
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-000",
+          "bytes": 41943040,
+          "sha256": "ad418e1a633fe395f6f3e4b4ff8826ad5e4d20d33c138de661bb53c8a7393cb7"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-001",
+          "bytes": 41943040,
+          "sha256": "710ac03505dd542fbdf2ec0e2b06640dfee1b87b121e8cf411960332f27ee6c0"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-002",
+          "bytes": 41943040,
+          "sha256": "6a6912b315b6d587991fdd31458ffe031d4193562ac7290a4cc7d76de6707b1d"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-003",
+          "bytes": 41943040,
+          "sha256": "a52f37455d88781ad7fc3cb3efb3fdcd4ec5510015276f579f9239b8cd6308c3"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-004",
+          "bytes": 41943040,
+          "sha256": "98604fc05a84e323b8311296d81ed119eb028804ac07e6ec2f8fc42ccf3d59d1"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-005",
+          "bytes": 41943040,
+          "sha256": "b062791d2eef92f39d7c03bf9f33d3bc08c9da329481c0248396e99b248829cf"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-006",
+          "bytes": 41943040,
+          "sha256": "343417d662e445025b504155aefa9a2489ccdffd5e2013cfd01a5006746478be"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-007",
+          "bytes": 41943040,
+          "sha256": "3c4f8039f231bb7c1b10436fa709598106499ab316161ffb7bf30cfadc985bce"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-008",
+          "bytes": 41943040,
+          "sha256": "2d38dffa57802d7178748f4d3ddc16220f439bf9dc3991d6c17a1de5cc8ac44c"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-009",
+          "bytes": 41943040,
+          "sha256": "97015b556f4f5e1f08640ca2356c0564759abba366bab66c0021a77e854ce7ae"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-010",
+          "bytes": 41943040,
+          "sha256": "8fc20d15f97007f19936a2e16761a950be7cdf410fcaee11750ac8619dbeb68e"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-011",
+          "bytes": 41943040,
+          "sha256": "b61c11951cbdb3f9b4b261395b1648b6dd9d3c13f56683bf227c2d4122ef3b11"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-012",
+          "bytes": 41943040,
+          "sha256": "dc3a08dd0cf41d1bbe03aedabb66185efcea0abc81090539baba98890958c457"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-013",
+          "bytes": 41943040,
+          "sha256": "ea01e5b4282b97d272178cc281691bf0f0b08c4139fb2b7f8c8229d80e5fd05d"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-014",
+          "bytes": 41943040,
+          "sha256": "2ffe2bc580bce9f391e34c5981142f7b17ff12e23c0d37314753aa318070b7bc"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-015",
+          "bytes": 41943040,
+          "sha256": "ef1b9dbddee793e05a4db83d55903da27dc9db9faa81fd872cd718f6ed8cf817"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-016",
+          "bytes": 41943040,
+          "sha256": "202ffac50f459b1ec8c1c2e7251648a5847b0bb1678aaf03b306ecd9c3082d0a"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-017",
+          "bytes": 41943040,
+          "sha256": "c3f7af65471be2e2492f5f14408b449174c5413068578326753d176f4a286c13"
+        },
+        {
+          "file": "voip50-rootfs.tar.gz.gpg.part-018",
+          "bytes": 39526377,
+          "sha256": "fccaec7085491cf890c739e69708afbcd82f0de68f4f7534bbfbb419e8c2d05a"
+        }
+      ]
+    }
+  ]
+}

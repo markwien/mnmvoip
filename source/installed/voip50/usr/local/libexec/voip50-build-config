@@ -1,0 +1,7 @@
+#!/bin/sh
+# LIVE requires the separate runtime identity, firewall and commissioning gate.
+case "$(cat /etc/voip50/mode)" in
+    BUILD) exec /usr/local/libexec/voip50-live-runtime build ;;
+    LIVE) exec /usr/local/libexec/voip50-live-runtime start ;;
+    *) exit 1 ;;
+esac

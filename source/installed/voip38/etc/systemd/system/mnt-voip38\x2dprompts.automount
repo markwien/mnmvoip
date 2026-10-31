@@ -1,0 +1,9 @@
+[Unit]
+Description=On-demand read-only VoIP38 announcement source
+
+[Automount]
+Where=/mnt/voip38-prompts
+TimeoutIdleSec=120
+
+[Install]
+WantedBy=multi-user.target

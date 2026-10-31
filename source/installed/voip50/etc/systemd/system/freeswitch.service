@@ -1,0 +1,19 @@
+[Unit]
+Description=FreeSWITCH VoIP50 isolated BUILD
+Wants=network-online.target
+After=network-online.target nftables.service
+Requires=nftables.service
+[Service]
+Type=simple
+User=freeswitch
+Group=freeswitch
+RuntimeDirectory=freeswitch
+WorkingDirectory=/var/lib/freeswitch
+ExecStartPre=+/usr/local/libexec/voip50-build-config
+ExecStart=/opt/freeswitch/bin/freeswitch -nc -nf -nonat -u freeswitch -g freeswitch -conf /etc/freeswitch -mod /opt/freeswitch/lib/freeswitch/mod -scripts /var/lib/freeswitch/scripts -log /var/log/freeswitch -db /var/lib/freeswitch/db -run /run/freeswitch -sounds /var/lib/freeswitch/sounds -recordings /var/lib/freeswitch/recordings
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=100000
+UMask=0077
+[Install]
+WantedBy=multi-user.target

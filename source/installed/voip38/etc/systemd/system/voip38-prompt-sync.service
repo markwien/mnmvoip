@@ -1,0 +1,10 @@
+[Unit]
+Description=Validate and mirror VoIP38 custom announcements from read-only NAS
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/voip38-sync-prompts
+TimeoutStartSec=90
+UMask=0077

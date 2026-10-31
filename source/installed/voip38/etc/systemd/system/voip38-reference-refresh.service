@@ -1,0 +1,10 @@
+[Unit]
+Description=Validate protected VoIP38 panel configuration reference
+After=network-online.target
+Wants=network-online.target
+Before=freeswitch.service
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/voip38-refresh-reference
+[Install]
+WantedBy=multi-user.target

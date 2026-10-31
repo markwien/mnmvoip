@@ -1,0 +1,20 @@
+# INACTIVE: install only during the jointly approved cutover, with the old VM stopped.
+auto lo
+iface lo inet loopback
+
+auto enX0
+iface enX0 inet static
+    address 192.168.1.38/24
+    pre-up /usr/local/libexec/voip38-check-interface enX0 internal
+
+iface enX0 inet6 manual
+
+auto enX1
+iface enX1 inet static
+    address 92.61.60.38/26
+    gateway 92.61.60.1
+    dns-nameservers 8.8.8.8
+    pre-up /usr/local/libexec/voip38-check-interface enX1 public
+    pre-up /sbin/sysctl -q -w net.ipv6.conf.enX1.disable_ipv6=1
+
+iface enX1 inet6 manual

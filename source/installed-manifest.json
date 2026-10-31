@@ -1,0 +1,162 @@
+{
+  "source/installed/voip38/etc/systemd/system/voip38-cdr-rotate.service": {
+    "installed_path": "/etc/systemd/system/voip38-cdr-rotate.service",
+    "sha256": "3020a20f4b8a2624c70a9ed70cd68835772d1de90e50634ba6c66d99d15a0530"
+  },
+  "source/installed/voip38/etc/systemd/system/networking.service.d/voip38-firewall.conf": {
+    "installed_path": "/etc/systemd/system/networking.service.d/voip38-firewall.conf",
+    "sha256": "d48fd35e6294417d503b687631259e92e37669da082fd8aeca7ec40fd6ecef48"
+  },
+  "source/installed/voip38/etc/systemd/system/freeswitch.service.d/dhcp.conf": {
+    "installed_path": "/etc/systemd/system/freeswitch.service.d/dhcp.conf",
+    "sha256": "f295af14d8808756e416e90b86cdd3d83b7b8dd423ce3993297313b0ca82fb71"
+  },
+  "source/installed/voip38/etc/systemd/system/freeswitch.service.d/recordings.conf": {
+    "installed_path": "/etc/systemd/system/freeswitch.service.d/recordings.conf",
+    "sha256": "755e8d96ee18d0695f203129ba8d26d749dec29ad473da17e7f24d8a969b02af"
+  },
+  "source/installed/voip38/etc/systemd/system/freeswitch.service.d/runtime.conf": {
+    "installed_path": "/etc/systemd/system/freeswitch.service.d/runtime.conf",
+    "sha256": "6bfe490ed4f99d392a67da6c43debabbbc8452cd478ac500bbd8eda28a5749ee"
+  },
+  "source/installed/voip38/etc/systemd/system/voip38-prompt-sync.service": {
+    "installed_path": "/etc/systemd/system/voip38-prompt-sync.service",
+    "sha256": "7c67033b49be42972125581a28eb408b4ebf968691a315556bc6b30beb750cd1"
+  },
+  "source/installed/voip38/etc/systemd/system/voip38-reference-refresh.service": {
+    "installed_path": "/etc/systemd/system/voip38-reference-refresh.service",
+    "sha256": "9e3f8bb9bb9389b22aa75a0696247bea25e97f6f4bf7c1936bc27edc330ba1e2"
+  },
+  "source/installed/voip38/etc/systemd/system/freeswitch.service": {
+    "installed_path": "/etc/systemd/system/freeswitch.service",
+    "sha256": "c26efcc498994493c4bd4e8b78a10157062aa6c31e1d1f0bbac254069976253d"
+  },
+  "source/installed/voip38/etc/systemd/system/voip38-firewall-fetch.timer": {
+    "installed_path": "/etc/systemd/system/voip38-firewall-fetch.timer",
+    "sha256": "be423c383dbf07cb6fe9164915d720dc3cf7218fd628c09d33e91fa31e80e2fb"
+  },
+  "source/installed/voip38/etc/systemd/system/mnt-voip38\\x2dprompts.automount": {
+    "installed_path": "/etc/systemd/system/mnt-voip38\\x2dprompts.automount",
+    "sha256": "d39d7abcd76bc2f8eb882a2299911e85c63ad7f0beada4decba759710b658c1f"
+  },
+  "source/installed/voip38/etc/systemd/system/voip38-cdr-rotate.timer": {
+    "installed_path": "/etc/systemd/system/voip38-cdr-rotate.timer",
+    "sha256": "411cde5e748a33ea889c6794a4eda54d9979afe2f20a0bea160f54779e421c9f"
+  },
+  "source/installed/voip38/etc/systemd/system/voip38-firewall-fetch.service": {
+    "installed_path": "/etc/systemd/system/voip38-firewall-fetch.service",
+    "sha256": "35a13a92755eb19f6753b56939078d89073c80f3d340f367ad5be192a8408b85"
+  },
+  "source/installed/voip38/etc/systemd/system/voip38-prompt-sync.timer": {
+    "installed_path": "/etc/systemd/system/voip38-prompt-sync.timer",
+    "sha256": "0ea66379ba07be82778e2c2d85b51cd7b4051b4b6618d2fd2ec7740d77ee7aed"
+  },
+  "source/installed/voip38/etc/systemd/system/mnt-voip38\\x2dprompts.mount": {
+    "installed_path": "/etc/systemd/system/mnt-voip38\\x2dprompts.mount",
+    "sha256": "0ed0ebc2f0ba81f168184bd32c1d726eca050891e97496432f62e33178973679"
+  },
+  "source/installed/voip38/etc/network/interfaces.d/50-cloud-init": {
+    "installed_path": "/etc/network/interfaces.d/50-cloud-init",
+    "sha256": "4fef20010cf8abf037f264c790f3e85fd26d8a3471aa0dec441391d5c28ced7b"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-render-xml": {
+    "installed_path": "/usr/local/libexec/voip38-render-xml",
+    "sha256": "cfabdf954f3f3bc0ee9820214aa6da2b3e5dd7ace2387a94644010a4e3ff37ad"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-check-interface": {
+    "installed_path": "/usr/local/libexec/voip38-check-interface",
+    "sha256": "442099cbe8ee4e3514c9166a3501d368d6b42b92f182a979cc7f49c356b71e2c"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-refresh-address": {
+    "installed_path": "/usr/local/libexec/voip38-refresh-address",
+    "sha256": "d1c828ffaa5d63b81d2e26925b9b3d216a4b52c1f3b57baec113074cd41b98ea"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-integrate": {
+    "installed_path": "/usr/local/libexec/voip38-integrate",
+    "sha256": "58563852ee2682aa7cf663e9a95d0761a12fbf1e32940a048026ab55cc96dc58"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-cdr-reopen": {
+    "installed_path": "/usr/local/libexec/voip38-cdr-reopen",
+    "sha256": "93b11b669bbe0c272a57b678faca0b13fbe1ffa4dac434f8a151d0e2de28f5a2"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-refresh-reference": {
+    "installed_path": "/usr/local/libexec/voip38-refresh-reference",
+    "sha256": "6043eb66e8685ecb31a3a3fc80760b8bfea41fb4467ac7cb51c91fdc40f3d3ff"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-sync-prompts": {
+    "installed_path": "/usr/local/libexec/voip38-sync-prompts",
+    "sha256": "f0ab198dae25f5393e4cb7a1674ce67116d11faa11d7a2a0f9249b001967e9f9"
+  },
+  "source/installed/voip38/usr/local/libexec/voip38-check-ready": {
+    "installed_path": "/usr/local/libexec/voip38-check-ready",
+    "sha256": "41b43ff91da3f24284e823f364a9c3800328a540490c18651b634433a2cc3b55"
+  },
+  "source/installed/voip38/usr/local/bin/fs_cli": {
+    "installed_path": "/usr/local/bin/fs_cli",
+    "sha256": "096b6b6cf2565571309e7cfac14b80746f483370a1e7abc66540b84fd513f1af"
+  },
+  "source/installed/voip50/etc/systemd/system/mnt-voip50\\x2dprompts.automount": {
+    "installed_path": "/etc/systemd/system/mnt-voip50\\x2dprompts.automount",
+    "sha256": "4e9fde98ef72f959e3a4a2d3a3057234df9efdbdece6a2bcb1bf9e21dc3a22ef"
+  },
+  "source/installed/voip50/etc/systemd/system/mnt-voip50\\x2dprompts.mount": {
+    "installed_path": "/etc/systemd/system/mnt-voip50\\x2dprompts.mount",
+    "sha256": "fa6ee1419b00d76f451fd4e44e38bbb2119f97b6e039c668958c1bc75f6feb3f"
+  },
+  "source/installed/voip50/etc/systemd/system/voip50-prompt-sync.timer": {
+    "installed_path": "/etc/systemd/system/voip50-prompt-sync.timer",
+    "sha256": "25c713c594c20c00acc52634c3ea972f1997a8538158027105580148b984b636"
+  },
+  "source/installed/voip50/etc/systemd/system/freeswitch.service": {
+    "installed_path": "/etc/systemd/system/freeswitch.service",
+    "sha256": "f21b5a257ac3d485a8b4004be6ace8d7d510e6ee06e3172d3ca153074753ff8f"
+  },
+  "source/installed/voip50/etc/systemd/system/voip50-cdr-rotate.service": {
+    "installed_path": "/etc/systemd/system/voip50-cdr-rotate.service",
+    "sha256": "ad026c4f74204d420557e1b26bd3c822b887b102231d6e7ef6aef76f7bd111c2"
+  },
+  "source/installed/voip50/etc/systemd/system/voip50-prompt-sync.service": {
+    "installed_path": "/etc/systemd/system/voip50-prompt-sync.service",
+    "sha256": "b8541e020da9ebf4462f96470cba87f120d092bd513e135a9259dc5915bbd278"
+  },
+  "source/installed/voip50/etc/systemd/system/voip50-cdr-rotate.timer": {
+    "installed_path": "/etc/systemd/system/voip50-cdr-rotate.timer",
+    "sha256": "d94ba3ba5882b4b1992e1ed77dd9dd69edbed33a60e810a063dc1c1b73a210bb"
+  },
+  "source/installed/voip50/etc/network/interfaces.d/50-cloud-init": {
+    "installed_path": "/etc/network/interfaces.d/50-cloud-init",
+    "sha256": "664eb02c7f9b7d2ac973c1796cc9a385ac68fb9e6b0ce8a6c04ae9bab6474825"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-check-interface": {
+    "installed_path": "/usr/local/libexec/voip50-check-interface",
+    "sha256": "e848e00c754c3b9289aa004bc5f0b207aa6bbd1d9fc3b336217eb59933a24c23"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-build-config": {
+    "installed_path": "/usr/local/libexec/voip50-build-config",
+    "sha256": "2a72bd2d75439b7b911f920974038f31808c5f702841465658ff5cf957ca6ad0"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-cdr-reopen": {
+    "installed_path": "/usr/local/libexec/voip50-cdr-reopen",
+    "sha256": "040b9ed28d6d72c42493740ee9f6e17b99612709d99f8cd742f40a2e96c1dded"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-live-runtime": {
+    "installed_path": "/usr/local/libexec/voip50-live-runtime",
+    "sha256": "53a4f033aabbf095738af8fdd56ab71a507fbd7e1cdc17b942d0ada004353c24"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-base-config": {
+    "installed_path": "/usr/local/libexec/voip50-base-config",
+    "sha256": "ddd54b155806a43ad8e7c9c0ceb872e722673a1dedd6ab9e65e2b0ffa3c9c342"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-config": {
+    "installed_path": "/usr/local/libexec/voip50-config",
+    "sha256": "d1d1483b848b4236233db41bb867c1bad844cd87733dcc53da4d52a09af8ecac"
+  },
+  "source/installed/voip50/usr/local/libexec/voip50-sync-prompts": {
+    "installed_path": "/usr/local/libexec/voip50-sync-prompts",
+    "sha256": "0c8807a6c06d9dcc263e3ab9bf8cd6ca492ee902dc29860bc0974c515070524f"
+  },
+  "source/installed/voip50/usr/local/bin/fs_cli": {
+    "installed_path": "/usr/local/bin/fs_cli",
+    "sha256": "096b6b6cf2565571309e7cfac14b80746f483370a1e7abc66540b84fd513f1af"
+  }
+}

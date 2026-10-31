@@ -1,0 +1,6 @@
+[Unit]
+Description=Update validated VoIP38 firewall and retain coherent XML reference
+After=network-online.target freeswitch.service
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/voip38-integrate sync

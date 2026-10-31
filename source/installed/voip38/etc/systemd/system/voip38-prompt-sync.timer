@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh VoIP38 custom announcements every ten minutes
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=10min
+AccuracySec=10s
+Unit=voip38-prompt-sync.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=VoIP38 replacement FreeSWITCH pilot
+After=network-online.target nftables.service
+Wants=network-online.target
+Requires=nftables.service
+[Service]
+Type=simple
+User=freeswitch
+Group=freeswitch
+RuntimeDirectory=freeswitch
+ExecStart=/opt/freeswitch/bin/freeswitch -nc -nf -nonat -nonatmap -np -conf /etc/freeswitch -db /var/lib/freeswitch/db -log /var/log/freeswitch -run /run/freeswitch -scripts /var/lib/freeswitch/scripts -recordings /var/lib/freeswitch/recordings -temp /var/lib/freeswitch/tmp
+Restart=on-failure
+LimitNOFILE=65536
+NoNewPrivileges=true
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
